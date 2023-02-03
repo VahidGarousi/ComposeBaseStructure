@@ -1,4 +1,4 @@
-package garousi.dev.composebasestructure.base
+package garousi.dev.design_system.base
 
 import android.app.Activity
 import androidx.compose.foundation.layout.Box
@@ -6,8 +6,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
-import garousi.dev.composebasestructure.widget.ErrorView
-import garousi.dev.composebasestructure.widget.LoadingView
+import garousi.dev.design_system.widget.ErrorView
+import garousi.dev.design_system.widget.LoadingView
 
 @Composable
 fun BaseScreen(

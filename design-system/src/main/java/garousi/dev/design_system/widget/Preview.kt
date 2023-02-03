@@ -1,4 +1,4 @@
-package garousi.dev.composebasestructure.widget
+package garousi.dev.design_system.widget
 
 import android.content.res.Configuration
 import androidx.compose.ui.tooling.preview.Preview

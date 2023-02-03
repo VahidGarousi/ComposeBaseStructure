@@ -1,4 +1,4 @@
-package garousi.dev.composebasestructure.ui.theme
+package garousi.dev.design_system.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes
