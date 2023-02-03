@@ -1,4 +1,4 @@
-package garousi.dev.composebasestructure.base
+package garousi.dev.design_system.base
 
 import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.channels.Channel

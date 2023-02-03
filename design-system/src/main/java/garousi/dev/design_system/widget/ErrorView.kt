@@ -1,4 +1,4 @@
-package garousi.dev.composebasestructure.widget
+package garousi.dev.design_system.widget
 
 
 import androidx.compose.foundation.layout.fillMaxSize
@@ -11,7 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import garousi.dev.composebasestructure.ui.theme.ComposeBaseStructureTheme
+import garousi.dev.design_system.theme.ComposeBaseStructureTheme
 
 @Composable
 fun ErrorView(errorMessage: String) {

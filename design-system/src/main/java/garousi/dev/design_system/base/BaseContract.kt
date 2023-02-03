@@ -1,4 +1,4 @@
-package garousi.dev.composebasestructure.base
+package garousi.dev.design_system.base
 
 interface BaseContract :
     BaseUnidirectionalViewModel<BaseContract.BaseEvent, BaseContract.BaseEffect, BaseContract.BaseState> {

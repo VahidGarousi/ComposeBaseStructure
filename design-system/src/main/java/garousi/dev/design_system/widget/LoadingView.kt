@@ -1,4 +1,4 @@
-package garousi.dev.composebasestructure.widget
+package garousi.dev.design_system.widget
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.height
