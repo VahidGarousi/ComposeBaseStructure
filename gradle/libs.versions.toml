@@ -1,0 +1,23 @@
+[versions]
+androidxCore = "1.9.0"
+junit4 = "4.13.2"
+androidxLifecycle = "2.5.1"
+androidxActivity = "1.6.1"
+androidxTestExt = "1.1.4"
+androidxEspresso = "3.5.0"
+androidxComposeBom = "2022.12.00"
+androidxComposeCompiler = "1.3.2"
+androidGradlePlugin = "7.3.1"
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidxCore" }
+androidx-lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "androidxLifecycle" }
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "androidxActivity" }
+androidx-test-ext = { group = "androidx.test.ext", name = "junit-ktx", version.ref = "androidxTestExt" }
+androidx-test-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "androidxEspresso" }
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "androidxComposeBom" }
+junit4 = { group = "junit", name = "junit", version.ref = "junit4" }
+
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
