@@ -4,28 +4,28 @@ plugins {
 }
 
 android {
-    namespace ="garousi.dev.design_system"
+    namespace = "garousi.dev.design_system"
     compileSdk = 33
 
     defaultConfig {
-        minSdk = 21
-        targetSdk = 33
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
         getByName("release") {
-            isMinifyEnabled  = false
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            isMinifyEnabled = false
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
     }
     buildFeatures {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion =  "1.2.0"
+        kotlinCompilerExtensionVersion = "1.2.0"
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -41,8 +41,8 @@ dependencies {
     val composeBom = platform("androidx.compose:compose-bom:2022.12.00")
     api(composeBom)
     androidTestImplementation(composeBom)
-    api ("androidx.compose.ui:ui")
-    api( "androidx.compose.ui:ui-tooling-preview")
+    api("androidx.compose.ui:ui")
+    api("androidx.compose.ui:ui-tooling-preview")
     api("androidx.compose.material:material")
     androidTestApi("androidx.compose.ui:ui-test-junit4")
     debugApi("androidx.compose.ui:ui-tooling")
