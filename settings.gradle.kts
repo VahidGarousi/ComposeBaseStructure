@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "ComposeBaseStructure"
-include ':app'
-include ':design-system'
+include(":app")
+include(":design-system")
