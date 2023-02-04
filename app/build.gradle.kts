@@ -39,6 +39,7 @@ android {
 
 dependencies {
     implementation(project(":core:design-system"))
+    implementation(project(":feature:home"))
     implementation(libs.androidx.lifecycle.runtimeCompose)
 
 }
