@@ -39,6 +39,8 @@ android {
 
 dependencies {
     implementation(project(":core:design-system"))
+    implementation(libs.androidx.lifecycle.runtimeCompose)
+
 }
 
 // androidx.test is forcing JUnit, 4.12. This forces it to use 4.13

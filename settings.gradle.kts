@@ -17,3 +17,4 @@ dependencyResolutionManagement {
 rootProject.name = "ComposeBaseStructure"
 include(":app")
 include(":core:design-system")
+include(":feature:home")
