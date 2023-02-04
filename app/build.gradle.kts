@@ -1,18 +1,18 @@
+import dev.garousi.composebasestructure.ComposeBaseStructureBuildType
 plugins {
-    id("com.android.application")
-    kotlin("android")
+    id("gradleconvention.android.application")
+    id("gradleconvention.android.application.compose")
+    id("gradleconvention.android.hilt")
 }
 
 android {
-    namespace = "garousi.dev.design_system"
-    compileSdk = 33
-
+    namespace = "garousi.dev.composebasestructure"
     defaultConfig {
         applicationId = "garousi.dev.composebasestructure"
         minSdk =  21
         targetSdk =  33
         versionCode =  1
-        versionName =  "1.0"
+        versionName = "0.0.3" // X.Y.Z; X = Major, Y = minor, Z = Patch level
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -21,26 +21,14 @@ android {
     }
 
     buildTypes {
-        getByName("release") {
-            isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
+        val debug by getting {
+            applicationIdSuffix = ComposeBaseStructureBuildType.DEBUG.applicationIdSuffix
         }
-    }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
-    buildFeatures {
-        compose = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.3.2"
+        val release by getting {
+            isMinifyEnabled = true
+            applicationIdSuffix = ComposeBaseStructureBuildType.RELEASE.applicationIdSuffix
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+        }
     }
     packagingOptions {
         resources {
@@ -50,5 +38,14 @@ android {
 }
 
 dependencies {
-    implementation(project(":design-system"))
+    implementation(project(":core:design-system"))
+}
+
+// androidx.test is forcing JUnit, 4.12. This forces it to use 4.13
+configurations.configureEach {
+    resolutionStrategy {
+        force(libs.junit4)
+        // Temporary workaround for https://issuetracker.google.com/174733673
+        force("org.objenesis:objenesis:2.6")
+    }
 }
